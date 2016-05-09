@@ -1,4 +1,8 @@
 var AllSkills = React.createClass({
+  getInitialState() {
+    return { skills: [] }
+  },
+
   componentDidMount() {
     $.getJSON('/api/v1/skills.json', (response) => { console.table(response) });
   },
