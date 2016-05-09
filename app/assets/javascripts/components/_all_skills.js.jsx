@@ -1,24 +1,12 @@
 var AllSkills = React.createClass({
-  getInitialState() {
-      return {
-        skills: []
-      };
+  componentDidMount() {
+    console.log('Hello');
   },
-  compoundDidMount() {
- $.getJSON('/api/v1/skills.json', (response) => { this.setState({ skills: response }) });  },
-  render() {
-    var skills = this.state.skills.map((skill) => {
-      return (
-        <div>
-          <h3>{skill.name}</h3>
-          <p><strong>Level:</strong> {skill.level}</p>
-          <p>{skill.details}</p>
-        </div>
-      )
 
-    return(
+  render() {
+    return (
       <div>
-        {skills}
+        <h1>Hello from All Skills!</h1>
       </div>
     )
   }
